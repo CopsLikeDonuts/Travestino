@@ -7,7 +7,7 @@ const ProfileInfo = () => {
       <div>
         
         <div>
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_IoZ1zN3m5kSH-vs3pd4otJhincC9ZuvsQ&usqp=CAU' alt='profile-pic'></img>
+          <img src='background1.jpg' alt='profile-background'></img>
         </div>
         <div className={s.descriptionBlock}>
             ava + desc
