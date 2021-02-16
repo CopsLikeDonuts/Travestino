@@ -8,11 +8,11 @@ const MyPosts = (props) => {
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    props.dispatch({type: ''})
   }
 
   let addPost = () => {
-    props.addPost();
+    props.dispatch({type: 'asdas'})
   }
 
   let postsElements = props.posts.map(p => <Post message={p.post} likes={p.likes}/>);
