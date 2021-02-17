@@ -65,7 +65,7 @@ let store = {
         } else if (action.type === SEND_MESSAGE) {
             let body = this._state.dialogsPage.newMessageBody;
             this._state.dialogsPage.newMessageBody = '';
-            this._state.dialogsPage.messages.push({id: 6, message: body});
+            this._state.dialogsPage.messages.push({id: 6, text: body});
             this._callSubscriber(this._state);
         }
     }
