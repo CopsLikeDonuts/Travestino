@@ -3,9 +3,17 @@
     grid-area: n;
     background-color: #07ABE4;
     display: block;
+    padding: 20px;
     
-  }
+}
 
-.item {
+
+
+.item a{
   color: white;
+  text-decoration: none;
+}
+
+.item a.activeLink {
+  color:burlywood;
 }
