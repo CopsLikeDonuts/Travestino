@@ -3,13 +3,14 @@ import './App.css';
 import Header from './components/header/Header';
 import Navbar from './components/navbar/Navbar';
 import Profile from './components/profile/Profile';
-import Dialogs from './components/dialogs/Dialogs';
+import DialogsContainer from './components/dialogs/DialogsContainer';
 import News from './components/news/News';
 import Music from './components/music/Music';
 import Settings from './components/settings/Settings';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 const App = (props) => {
+  console.log(props);
   return (
     <BrowserRouter>
       <div className='appWrapper'>
@@ -17,10 +18,9 @@ const App = (props) => {
         <Navbar />
         <div className='app-wrapper-content'>
           <Route path='/profile' 
-                 render={() => <Profile profilePage={props.state.profilePage}
-                                        dispatch={props.dispatch}
+                 render={() => <Profile store={props.store}
                                         />}/>
-          <Route path='/dialogs' render={() => <Dialogs store={props.store} />}/>
+          <Route path='/dialogs' render={() => <DialogsContainer store={props.store} />}/>
           <Route path='/news' render={() => <News/>}/>
           <Route path='/music' render={() => <Music/>}/>
           <Route path='/settings' render={() => <Settings/>}/>
