@@ -3,7 +3,7 @@ import MyPosts from './MyPosts';
 import {updateNewPostTextActionCreator, addPostActionCreator} from '../../../redux/profileReducer';
 import StoreContext from '../../../StoreContext';
 
-const MyPostsContainer = (props) => {
+const MyPostsContainer = () => {
     return (
         <StoreContext.Consumer>
           {

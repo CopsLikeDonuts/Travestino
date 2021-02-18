@@ -9,8 +9,8 @@ import Music from './components/music/Music';
 import Settings from './components/settings/Settings';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-const App = (props) => {
-  console.log(props);
+const App = () => {
+
   return (
     <BrowserRouter>
       <div className='appWrapper'>
