@@ -7,8 +7,8 @@ const Profile = () => {
   debugger;
     return (
       <div>
-        <ProfileInfo store={store}/>
-        <MyPostsContainer store={store}/>
+        <ProfileInfo />
+        <MyPostsContainer/>
       </div>
     )
 }
