@@ -5,10 +5,10 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
   ReactDOM.render(
     <BrowserRouter>
-      <Provider value={store}>
+      <Provider store={store}>
         <App/>
       </Provider>
     </BrowserRouter>
