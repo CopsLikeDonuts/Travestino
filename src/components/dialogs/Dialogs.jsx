@@ -4,15 +4,15 @@ import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 
 const Dialogs = (props) => {
-
+    console.log(props);
     let state = props.dialogsPage;
 
     let dialogsElements = state.dialogs.map (d => {
-        return <DialogItem name={d.name} id={d.id}/>
+        return <DialogItem name={d.name} id={d.id} key={d.id}/>
     });
     
     let messagesElements = state.messages.map(m => {
-        return <Message message={m.text}/>
+        return <Message message={m.text} key={m.id}/>
     });
     let newMessageBody = state.newMessageBody;
 
@@ -22,7 +22,7 @@ const Dialogs = (props) => {
 
     let onNewMessageChange = (e) => {
         let body = e.target.value;
-        props.updateNewMessageBodyCreator(body);
+        props.updateNewMessageBody(body);
     }
 
 
