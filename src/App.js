@@ -7,12 +7,13 @@ import DialogsContainer from './components/dialogs/DialogsContainer';
 import News from './components/news/News';
 import Music from './components/music/Music';
 import Settings from './components/settings/Settings';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
+import UsersContainer from './components/users/UsersContainer';
 
-const App = (props) => {
-  console.log(props);
+
+const App = () => {
+
   return (
-    <BrowserRouter>
       <div className='appWrapper'>
         <Header />
         <Navbar />
@@ -23,9 +24,9 @@ const App = (props) => {
           <Route path='/news' render={() => <News/>}/>
           <Route path='/music' render={() => <Music/>}/>
           <Route path='/settings' render={() => <Settings/>}/>
+          <Route path='/users' render={() => <UsersContainer/>}/>
         </div>
       </div>
-    </BrowserRouter>
   );
 }
 
