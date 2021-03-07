@@ -8,12 +8,15 @@ const instance = axios.create({
     }
 });
 
-export const getUsers = (currentPage = 1, pageSize = 10) => {
-    return instance.get(`users?page=${currentPage}&count=${pageSize}`)
-        .then(response => {
-    return response.data;
-})
+export const usersAPI = {
+    getUsers(currentPage = 1, pageSize = 10){
+        return instance.get(`users?page=${currentPage}&count=${pageSize}`)
+            .then(response => {
+        return response.data;
+            });
 }
+}
+
 
 export const followUser = (id, followFunc) => {
     return instance.post(`follow/${id}`, {})
@@ -22,4 +25,13 @@ export const followUser = (id, followFunc) => {
                 followFunc(id);
             }
         })
+}
+
+export const unfollowUser = (id, unfollowFunc) => {
+    return instance.delete(`follow/${id}`)
+    .then(response => {
+        if (response.data.resultCode === 0) {
+            unfollowFunc(id);
+        }
+    });
 }
