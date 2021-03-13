@@ -9,6 +9,7 @@ import Settings from './components/settings/Settings';
 import {Route} from 'react-router-dom';
 import UsersContainer from './components/users/UsersContainer';
 import HeaderContainer from './components/header/HeaderContainer';
+import LoginPage from './components/login/Login';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/music' render={() => <Music/>}/>
           <Route path='/settings' render={() => <Settings/>}/>
           <Route path='/users' render={() => <UsersContainer/>}/>
+          <Route path='/login' render={() => <LoginPage/>}/>
         </div>
       </div>
   );
